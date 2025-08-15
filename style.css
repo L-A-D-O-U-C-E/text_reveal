@@ -1,0 +1,52 @@
+body {
+    margin:0;
+}
+
+footer {
+    border-top: 1px solid #ebebeb;
+    color:#767676;
+
+    padding: 50px;
+    text-align: center;
+}
+
+img {
+    width: 100vw;
+    height: 80vh;
+    object-fit: contain;
+}
+
+
+.text{
+    display: flex; /*คำสั่งนี้จะเปลี่ยน Element ที่ถูกกำหนดให้เป็น Flex Container ทำให้คุณสามารถใช้คุณสมบัติ Flexbox เพื่อจัดวาง Element ที่อยู่ภายในได้*/
+    flex-direction: column; /*กำหนดทิศทางการจัดเรียงของ Flex Item (Element ที่อยู่ข้างใน) ให้เรียงกันใน แนวตั้ง (จากบนลงล่าง)*/
+    justify-content: center; /*จัดเรียง Flex Item ทั้งหมดให้อยู่ กึ่งกลาง ในแนวแกนหลัก*/
+
+    height: 20vh;
+
+    opacity: 0;
+    /*translateY(): เป็น Function ของ transform ที่ใช้ในการขยับ Element ใน แนวตั้ง (แกน Y) เท่านั้น
+     25px: เป็นค่าที่บอกว่าให้ขยับ Element ลงมา 25 พิกเซล*/
+    transform: translateY(25px);
+    transition: 0.4s all linear; /*อันนี้เป็นอนิเมชั่น*/
+}
+/*div > p	เลือกเฉพาะ <p> ที่เป็น ลูกโดยตรง ของ <div>
+div p	เลือก <p> ทั้งหมดที่อยู่ ภายใน <div> ไม่ว่าจะลึกแค่ไหน
+*/
+
+.text > h2 {
+    text-align: center;
+    margin:0;
+}
+
+.text > p {
+    color:#888888;
+
+    margin:0;
+    padding: 10px 30px;
+}
+
+.reveal{
+    opacity: 1;
+    transform: translateY(0);
+}
